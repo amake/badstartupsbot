@@ -12,5 +12,5 @@ fi
 zip lambda-deploy *.py *.json nouns.txt -x \*.pyc
 
 cd .env/lib/python2.7/site-packages
-zip -r ../../../../lambda-deploy ./!(pip*|wheel*|setuptools*|easy_install*) \
+zip -r ../../../../lambda-deploy ./!(pip*|wheel*|setuptools*|easy_install*|pattern*|Pattern*|nltk*) \
     -x \*.pyc
