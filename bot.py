@@ -1,5 +1,6 @@
 from __future__ import print_function
 import os
+import sys
 import tweepy
 import json
 import badstartups
@@ -13,7 +14,7 @@ if os.path.isfile(creds_file):
         credentials = json.load(infile)
 else:
     print('Credentials not found. Run auth_setup.py first.')
-    exit(1)
+    sys.exit(1)
 
 auth = tweepy.OAuthHandler(credentials['ConsumerKey'],
                            credentials['ConsumerSecret'])

@@ -1,5 +1,6 @@
 from __future__ import print_function
 import os
+import sys
 import tweepy
 import json
 import subprocess
@@ -18,7 +19,7 @@ if os.path.isfile(creds_file):
     if all(item in credentials for item in ['ConsumerKey', 'ConsumerSecret',
                                             'AccessToken', 'AccessSecret']):
         print('Nothing to do.')
-        exit(0)
+        sys.exit(0)
 
 for item in ['ConsumerKey', 'ConsumerSecret']:
     if item not in credentials:

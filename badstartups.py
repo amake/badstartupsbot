@@ -1,5 +1,6 @@
 from __future__ import print_function
 import os
+import sys
 import random
 
 nouns = []
@@ -9,7 +10,7 @@ if os.path.isfile('nouns.txt'):
         nouns = f.read().splitlines()
 else:
     print('Nouns not found. Run getnouns.py first.')
-    exit(1)
+    sys.exit(1)
 
 def random_idea():
     return 'Like Uber but for %s' % random.choice(nouns)
