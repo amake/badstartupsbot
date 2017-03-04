@@ -7,5 +7,8 @@ with open('nouns.txt', 'w') as ofile:
                 for lemma in synset.lemmas())
     for word in sorted(words):
         plural = pluralize(word)
-        ofile.write(plural)
+        if plural.endswith('ss'):
+            ofile.write(word)
+        else:
+            ofile.write(plural)
         ofile.write('\n')
