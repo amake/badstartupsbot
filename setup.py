@@ -23,5 +23,5 @@ setup(
     ],
     keywords='startups bad ideas',
     py_modules=['badstartups', 'bot', 'getnouns'],
-    install_requires=['tweepy', 'nltk', 'patterns']
+    install_requires=['tweepy', 'nltk', 'pattern']
 )
