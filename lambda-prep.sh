@@ -5,6 +5,11 @@ if [ ! -d .env ]; then
     .env/bin/pip install -e .
 fi
 
+if [ ! -f nouns.txt ]; then
+    echo "Required file nouns.txt not found. Run getnouns.py."
+    exit 1
+fi
+
 if [ -f lambda-deploy.zip ]; then
     rm lambda-deploy.zip
 fi
