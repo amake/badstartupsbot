@@ -3,6 +3,9 @@ import os
 import sys
 import random
 
+companies = ['Uber', 'Facebook', 'Twitter', 'YouTube', 'Foursquare',
+             'Napster', 'Airbnb', 'Snapchat', 'Dropbox', 'Amazon',
+             'LinkedIn', 'eBay', 'Groupon', 'Craigslist']
 nouns = []
 
 if os.path.isfile('nouns.txt'):
@@ -13,7 +16,8 @@ else:
     sys.exit(1)
 
 def random_idea():
-    return 'Like Uber but for %s' % random.choice(nouns)
+    return 'Like %s but for %s' % (random.choice(companies),
+                                   random.choice(nouns))
 
 if __name__ == '__main__':
     for _ in xrange(10):
